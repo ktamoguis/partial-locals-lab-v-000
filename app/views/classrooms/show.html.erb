@@ -1,9 +1,5 @@
 Classroom Info
 <%= render partial: "classroom", locals: {classroom: Classroom.find(params[:id])} %>
-<p>
-<%= @classroom.course_name %>
-<%= @classroom.semester %>
-</p>
 
 <!--We now want to call out the oldest student in the class:-->
 <% @classroom.students.each do |student| %>
