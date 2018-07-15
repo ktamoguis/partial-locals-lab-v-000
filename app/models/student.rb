@@ -28,7 +28,7 @@ class Student < ActiveRecord::Base
         #binding.pry
         if /#{search_string}/.match(student.name.downcase)
           binding.pry
-          array << student.name
+          array << student
         end
       end
       #binding.pry
