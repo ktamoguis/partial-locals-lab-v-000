@@ -22,7 +22,6 @@ class Student < ActiveRecord::Base
       self.all.each do |student|
         array << student.name
       end
-      binding.pry
     else
       binding.pry
       self.all.each do |student|
