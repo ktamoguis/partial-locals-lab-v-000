@@ -19,13 +19,13 @@ class Student < ActiveRecord::Base
     array = []
     if search_string == ""
       binding.pry
-      self.each do |student|
+      self.all.each do |student|
         array << student.name
       end
       binding.pry
     else
       binding.pry
-      self.each do |student|
+      self.all.each do |student|
         if /.search_string./.match(student.name)
           array << student.name
         end
