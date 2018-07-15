@@ -15,6 +15,7 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(search_string)
+    binding.pry
     array = []
     if search_string == ""
       self.each do |student|
