@@ -15,25 +15,18 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(search_string)
-    #binding.pry
     array = []
     if search_string == ""
-      #binding.pry
       self.all.each do |student|
         array << student
       end
     else
-      #binding.pry
       self.all.each do |student|
-        #binding.pry
         if /#{search_string}/.match(student.name.downcase)
-          #binding.pry
           array << student
         end
       end
-      #binding.pry
     end
-    binding.pry
     array
   end
 
