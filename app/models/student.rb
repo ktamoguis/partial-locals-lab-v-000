@@ -30,6 +30,7 @@ class Student < ActiveRecord::Base
           array << student.name
         end
       end
+      binding.pry
     end
   end
 
