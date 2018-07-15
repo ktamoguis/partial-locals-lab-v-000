@@ -15,10 +15,10 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(search_string)
-    binding.pry
+    #binding.pry
     array = []
     if search_string == ""
-      binding.pry
+      #binding.pry
       self.all.each do |student|
         array << student.name
       end
