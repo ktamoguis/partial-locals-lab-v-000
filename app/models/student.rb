@@ -32,6 +32,7 @@ class Student < ActiveRecord::Base
       end
       binding.pry
     end
+    binding.pry
     array
   end
 
