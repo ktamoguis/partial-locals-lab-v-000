@@ -18,7 +18,7 @@ class Student < ActiveRecord::Base
     array = []
     if search_string == ""
       self.each do |student|
-        array << student
+        array << student.name
       end
     else
     end
