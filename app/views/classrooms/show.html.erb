@@ -6,4 +6,4 @@ Classroom Info
 
 We now want to call out the oldest student in the class:
 <%= render 'students/student' %>
-<%= render partial: "students/student", locals: {student: @post.author} %>
+<%= render partial: "students/student", locals: {student: Classroom.find(params[:id]).oldest_student} %>
