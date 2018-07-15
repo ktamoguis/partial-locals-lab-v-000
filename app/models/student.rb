@@ -31,7 +31,7 @@ class Student < ActiveRecord::Base
           array << student.name
         end
       end
-      binding.pry
+      #binding.pry
     end
     binding.pry
     array
