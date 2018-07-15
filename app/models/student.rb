@@ -25,7 +25,7 @@ class Student < ActiveRecord::Base
     else
       binding.pry
       self.all.each do |student|
-        if /.search_string./.match(student.name)
+        if /.#{search_string}./.match(student.name)
           binding.pry
           array << student.name
         end
