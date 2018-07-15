@@ -18,6 +18,7 @@ class Student < ActiveRecord::Base
     binding.pry
     array = []
     if search_string == ""
+      binding.pry
       self.each do |student|
         array << student.name
       end
