@@ -17,7 +17,11 @@ class Student < ActiveRecord::Base
   def self.search(search_string)
     array = []
     if search_string == ""
-      
+      self.each do |student|
+        array << student
+      end
+    else
+    end
   end
 
 end
