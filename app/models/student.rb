@@ -20,10 +20,10 @@ class Student < ActiveRecord::Base
     if search_string == ""
       #binding.pry
       self.all.each do |student|
-        array << student.name
+        array << student
       end
     else
-      binding.pry
+      #binding.pry
       self.all.each do |student|
         #binding.pry
         if /#{search_string}/.match(student.name.downcase)
